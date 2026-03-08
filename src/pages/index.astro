@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// ここはサーバーサイド（ビルド時またはリクエスト時）に実行されます
+const serverTime = new Date().toLocaleTimeString();
+---
+
+<Layout title="Hello Astro">
+	<main class="p-8">
+		<div class="card bg-base-100 shadow-xl max-w-md mx-auto">
+			<div class="card-body">
+				<h2 class="card-title text-2xl font-bold italic">Hello, Astro 5.x! 🚀</h2>
+				<p class="text-gray-600">
+					これはサーバーサイドで生成されたページです。
+				</p>
+				<div class="badge badge-secondary p-4 mt-4">
+					サーバー時刻: {serverTime}
+				</div>
+				<div class="card-actions justify-end mt-6">
+					<button class="btn btn-primary">学習を始める</button>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
